@@ -7,7 +7,6 @@ export default function Calculator(){
     const [inputField = Int8Array, setInputField] = useState(0);
 
     const handleChange = event => {
-        debugger;
         if (parseInt(event.target.value) !== isNaN) {
            return setInputField(parseInt(event.target.value));
         }
@@ -37,7 +36,7 @@ export default function Calculator(){
     return (
         <div>
             <p>Result= {result}</p>
-            <input type="text" value={inputField} onChange={handleChange}/>
+            <input type="number" value={inputField} onChange={handleChange}/>
             <button onClick={() => setResult(add)}>
              +
             </button>
